@@ -119,17 +119,29 @@ classdef Vector < yarp.Portable
     %connection is of type ConnectionWriter. connection is of type ConnectionWriter. retval is of type bool. 
       [varargout{1:nargout}] = yarpMEX(1032, self, varargin{:});
     end
+    function varargout = toMatlab(self,varargin)
+    %Usage: retval = toMatlab ()
+    %
+    %retval is of type mxArray *. 
+      [varargout{1:nargout}] = yarpMEX(1033, self, varargin{:});
+    end
+    function varargout = fromMatlab(self,varargin)
+    %Usage: fromMatlab (in)
+    %
+    %in is of type mxArray *. 
+      [varargout{1:nargout}] = yarpMEX(1034, self, varargin{:});
+    end
     function varargout = get(self,varargin)
     %Usage: retval = get (j)
     %
     %j is of type int. j is of type int. retval is of type double. 
-      [varargout{1:nargout}] = yarpMEX(1033, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1035, self, varargin{:});
     end
     function varargout = set(self,varargin)
     %Usage: set (j, v)
     %
     %j is of type int. v is of type double. 
-      [varargout{1:nargout}] = yarpMEX(1034, self, varargin{:});
+      [varargout{1:nargout}] = yarpMEX(1036, self, varargin{:});
     end
   end
   methods(Static)
